@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>“Clicar e arrastar” é uma forma de mover determinados objetos na tela. Para mover um objeto, coloque o cursor do mouse sobre ele, pressione e segure o botão esquerdo do mouse e mova o mouse. Depois de "arrastar" o objeto para o local desejado, solte o botão do mouse.</p>
+    <p>Clique e arraste o vampirinho, e leve-o até o castelo!</p>
+    <br>
+    <div class="vamp">
+        <picture draggable="true" ondragstart="drag(event)"><img id="vamp" src="images/vamp.jpeg" draggable="true" ></picture>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img  id="vampcasa" src="images/vampcasa.jpeg" ></div>
+    </div>
+    <div><button class="mostrar"   onclick="location = '28.html'" style="display: none"><strong>Próximo</strong></button></div>
+</body>
+</html>

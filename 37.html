@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+<div>
+<p id="copia"><strong></strong></p>
+</div>
+
+<div>
+    <p>Pratique suas habilidades de <strong>copiar e colar</strong> copiando as respostas na coluna da <em>esquerda</em> e colando -as ao lado das perguntas corretas à <em>direita</em>.</p>
+
+    <p>Para copiar o texto, destaque-o com o mouse, mantenha pressionada a tecla <strong>Ctrl</strong> do teclado e toque rapidamente na <strong>tecla C</strong> . Para colar , clique dentro da caixa de texto onde deseja colar a resposta, mantenha pressionada a tecla Ctrl e toque rapidamente na tecla V.</p>
+        
+    <p>Você deve responder todas as perguntas corretamente antes de continuar.</p>
+</div>
+
+<div class="container">
+
+    <div class="respostas">
+        <h3>Respostas:</h3>
+        <p>A. 31 de Outubro</p>
+        <hr>
+        <p>B. "trick-or-treating" (doces ou travessuras)</p>
+        <hr>
+        <p>C. Laranja</p>
+        <hr>
+        <p>D. Morcego</p>
+    </div>
+
+    <div class="perguntas">
+        <h4>Questões:</h4>
+        <p>Qual é a cor das abóboras do Halloween?</p>
+        <p> <input type="text" id="1resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '1resposta')"></p> <picture> <img id="1img" class="bd"  src="2page20.png"></picture>
+        <p id="1mensagem" style="color: red;"></p>
+        <hr>
+        <p>Qual animal é frequentemente associado ao Halloween?</p>
+        <p> <input type="text" id="2resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '2resposta')"></p> <picture> <img id="2img" class="bd"  src="2page20.png"></picture>
+        <p id="2mensagem" style="color: red;"></p>
+        <hr>
+        <p>Quando é celebrado o Halloween?</p>
+        <p> Qual é a tradição mais comum durante o Halloween?</p>
+       <p> <input type="text" id="4resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '4resposta')"></p> <picture> <img id="4img" class="bd"  src="2page20.png"></picture>
+       <p id="4mensagem" style="color: red;"></p>
+   </div>
+
+</div>
+        <button id="final" onclick="location='38.html'"style="display: block;">Enviar</button>
+
