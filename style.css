@@ -25,6 +25,11 @@ h3{
     padding: 20px;
 }
 
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
 #pratica{
     height: 50px;
     width: 200px;
@@ -85,10 +90,6 @@ h3{
     cursor: pointer;
 }
 
-p{
-    padding: 10px;
-    font-size: 20px;
-}
 
 .quatroq{
     position:relative;
@@ -614,13 +615,7 @@ input{
 
 
 
-h2 {
 
-    text-align: center;
-
-    color: blueviolet;
-
-}
 
 
 
