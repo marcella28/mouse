@@ -14,6 +14,8 @@
 h1{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
+    position: relative;
+    left: 20px;
 }
 body{
     background-color:bisque;
@@ -22,6 +24,19 @@ body{
 h3{
     padding: 20px;
 }
+
+#pratica{
+    height: 50px;
+    width: 200px;
+    border-style: groove;
+    border-width: 4px;
+    background-color:rgb(118, 250, 113) ;
+    font-size: larger;
+    position: relative;
+    left: 45%;
+    border-color: #a202ff;
+}
+
 #bt{
     height: 50px;
     width: 100px;
@@ -34,10 +49,6 @@ h3{
 
 }
 
-h1{
-    position: relative;
-    left: 20px;
-}
 
 #um{
     color: blueviolet;
