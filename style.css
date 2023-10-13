@@ -156,7 +156,6 @@ p{
 
 .numbers8{
     position: relative;
-    left: 45%;
     display: grid;
     grid-template-columns: 12px 12px 12px 12px;
     grid-template-rows:  15px 15px 15px ;
@@ -230,10 +229,6 @@ p{
     border-color: #a202ff;
 }
 
-.pbt{
-    position: relative;
-    left: 20%;
-}
 
 
 
