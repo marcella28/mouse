@@ -4,18 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
+    <style>
+      *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.numtres{
+    display: flex;
+    flex-flow:row-reverse;
+    padding: 70px;
+}
+
+#tres{
+    color: rgb(23, 64, 199);
+    font-size: 50px; 
+    cursor: pointer;
+    display: flex;
+    flex-flow:row-reverse;
+
+}
+
+.num3{
+    display: flex;
+    flex-flow:row-reverse;
+    padding: 70px;
+}
+    </style>
 </head>
 <body>
     <div class="mg"><h1>Mouse Game - Halloween editions</h1></div>
     <p class="numtres">Clique no número 3 abaixo:</p>
 
-    <div class=" num 2direita">
-    <p id="tres" onclick="location = '4.html'">3</p>
-    </div>
-    <div style="display: flex; justify-content: start;">
+    <div class=" num3">
+    <span id="tres" onclick="location = '4.html'">3</span>
+    <div style="display: flex; justify-content: start; align-items:baseline">
         <img  src="images/aranha.gif" >
+    </div>
     </div>
 </body>
 </html>
