@@ -4,8 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>28</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+#btcont{
+    display: none;
+}
+
+.gifs2{
+    width: 1000px;
+}
+
+#btcont{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+input{
+    height: 18px;
+    width: 19px;
+}
+    </style>
+
+    <script>
+        function checkAllBoxes() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var allChecked = true;
+
+            checkboxes.forEach(function(checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+            });
+
+            if (allChecked) {
+                document.getElementById("btcont").style.display = "block";
+            }
+        }
+
+
+function addum(){
+    checkAllBoxes()
+}
+function addd(){
+    checkAllBoxes()
+}
+function addt(){
+    checkAllBoxes()
+}
+function addq(){
+    checkAllBoxes()
+}
+function addc(){
+    checkAllBoxes()
+}
+function adds(){
+    checkAllBoxes()
+}
+function addst(){
+    checkAllBoxes()
+}
+function addo(){
+    checkAllBoxes()
+}
+function addn(){
+    checkAllBoxes()
+}
+function adddz(){
+    checkAllBoxes()
+}
+
+    </script>
 </head>
 <body>
     <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
@@ -13,6 +117,7 @@
     <p>As caixas de seleção permitem selecionar uma ou mais opções de um grupo de opções. Clique dentro de cada uma das caixas de seleção com os nomes dos mosntrinhos abaixo:</p>
     <br>
     <div class="gifs2">
+        <div></div>
         <div></div>
         <input type="checkbox" id="lobisomem" onclick="add()"><strong>Lobisomem</strong> - Seres humanos que se transformam em lobos durante a lua cheia.<br><br>
         <input type="checkbox" id="bruxa" onclick="addt()"><strong>Bruxa</strong> - Mulheres com poderes mágicos, frequentemente retratadas como malévolas.<br><br>
