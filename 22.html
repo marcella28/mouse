@@ -37,18 +37,40 @@ p{
     font-size: 20px;
 }
 
+.custom-dialog {
+      display: none;
+      background: rgb(241, 176, 123);
+      padding: 20px;
+      border: 6px groove #c206f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+button{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
     <script>
-        function mensagem() {
-    let ação;
-    if (confirm("Deseja ir para a proxima página?") == true) {
-      ação = location = '23.html'
-    } else {
-        ação = location = '22.html'
+         function showCustomDialog() {
+      var caixa = document.getElementById("custom-dialog");
+      caixa.style.display = "block";
     }
-}
+
+    function redirectToPage(url) {
+      window.location.href = url;
+    }
 
     </script>
 
@@ -59,9 +81,14 @@ p{
 <p>As <strong>caixas de mensagens</strong> são mensagens curtas que o computador coloca na tela para alertá-lo sobre informações importantes ou para fazer perguntas antes de realizar uma tarefa.</p>
 <p>Quando uma caixa de mensagem aparecer, você deverá ler a mensagem ou pergunta e responder <strong>clicando no botão</strong> apropriado na caixa de mensagem.</p>
 <p>Clique no <strong>link abaixo</strong> para exibir uma caixa de mensagem, leia a mensagem e clique no botão apropriado na caixa.</p>
-<a href="#" id="msg" onclick="mensagem()" >Clique em mim para exibir uma caixa de mensagem</a>
+<a href="#" id="msg" onclick="showCustomDialog()" >Clique em mim para exibir uma caixa de mensagem</a>
+<div id="custom-dialog" class="custom-dialog">
+    <p>Deseja ir para a próxima página?</p>
+    <button onclick="redirectToPage('23.html')">Sim</button>
+    <button onclick="redirectToPage('22.html')">Não</button>
 <div style="display: flex; justify-content: end;">
     <img  src="images/abgato-unscreen.gif" >
+</div>
 </div>
 </body>
 </html>
