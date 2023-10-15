@@ -4,8 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>30</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
+    <style>
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+input{
+    height: 19px;
+    width: 19px;
+}
+
+#img1,#img2, #img3, #img4, #img5, #img6, #img7, #img8,#imgn1, #imgn2, #imgn3, #imgn4, #imgn5{
+    display: none;
+    position: absolute;
+    height: 600px;
+    width: 500px;
+    border-style: outset;
+    border-width: 5px;
+    border-color: #c402ff;
+}
+
+.radionimg{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 500px;
+        margin-left: 100px;
+}
+
+#btperso{height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+    </style>
+
+<script>
+      var perso= 8
+    var ckperso= 0
+    function persocheck(){
+        if(ckperso===perso) {
+            document.getElementById("btperso").style.display = "block";  
+            }
+     }
+
+     function ch1(){
+        ckperso ++;
+        persocheck();
+        document.getElementById("img1").style.display = "block"; 
+    }
+    function ch2(){
+        ckperso ++;
+        persocheck();
+        document.getElementById("img2").style.display = "block"; 
+
+    }
+
+    function ch3(){
+        ckperso ++;
+        persocheck();
+        document.getElementById("img3").style.display = "block"; 
+
+    }
+
+    function ch4(){
+        ckperso ++;
+        persocheck();
+        document.getElementById("img4").style.display = "block"; 
+
+    }
+    function ch5(){
+        ckperso ++;
+        persocheck();
+        document.getElementById("img5").style.display = "block"; 
+
+    } 
+    function ch6(){
+        ckperso ++;
+        persocheck();
+        document.getElementById("img6").style.display = "block"; 
+
+    }
+    function ch7(){
+        ckperso ++;
+        persocheck();
+        document.getElementById("img7").style.display = "block"; 
+
+    }
+    function ch8(){
+        ckperso ++;
+        persocheck();
+        document.getElementById("img8").style.display = "block"; 
+
+    }
+</script>
 </head>
 <body>
     <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
