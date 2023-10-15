@@ -188,6 +188,7 @@ function doce6() {
     } else {
         imagem.style.display = "none"; // Oculta a imagem
     }
+}
 
     function allowDrop(ev) {
         ev.preventDefault();
@@ -203,7 +204,7 @@ function doce6() {
         ev.target.appendChild(document.getElementById(data));
         document.getElementsByClassName('mostrar')[0].style.display = 'block';
       }
-    }
+    
 
     var perso= 8
     var ckperso= 0
