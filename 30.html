@@ -5,137 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>30</title>
     <style>
-*{
-    font-family: Arial, Helvetica, sans-serif;
-}
-.mg{
-    height: 70px;
-    width: auto;
-    padding: 10px;
-    border-style: solid;
-    border-width: 5px;
-    background-color: rgb(255, 154, 0);
-    border-color: rgb(247, 95, 28);  
-}
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-h1{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 35px;
-    position: relative;
-    left: 20px;
-}
-body{
-    background-color:bisque;
-}
+        .mg {
+            height: 70px;
+            width: auto;
+            padding: 10px;
+            border-style: solid;
+            border-width: 5px;
+            background-color: rgb(255, 154, 0);
+            border-color: rgb(247, 95, 28);
+        }
 
-h3{
-    padding: 20px;
-}
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 35px;
+            position: relative;
+            left: 20px;
+        }
 
-p{
-    padding: 10px;
-    font-size: 20px;
-}
+        body {
+            background-color: bisque;
+        }
 
-input{
-    height: 19px;
-    width: 19px;
-}
+        h3 {
+            padding: 20px;
+        }
 
-#img1,#img2, #img3, #img4, #img5, #img6, #img7, #img8,#imgn1, #imgn2, #imgn3, #imgn4, #imgn5{
-    display: none;
-    position: absolute;
-    height: 600px;
-    width: 500px;
-    border-style: outset;
-    border-width: 5px;
-    border-color: #ff5202;
-}
+        p {
+            padding: 10px;
+            font-size: 20px;
+        }
 
-.radionimg{
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        gap: 400px;
-        margin-left: 100px;
-}
+        input {
+            height: 19px;
+            width: 19px;
+        }
 
-#btperso
-{height: 40px;
-    width: 120px;
-    border-radius: 5px;
-    border-style: double;
-    border-width: 5px;
-    border-color: chartreuse;
-    background-color: #a202ff;
-    color: azure;
-}
+        #img1,
+        #img2,
+        #img3,
+        #img4,
+        #img5,
+        #img6,
+        #img7,
+        #img8,
+        #imgn1,
+        #imgn2,
+        #imgn3,
+        #imgn4,
+        #imgn5 {
+            display: none;
+            position: absolute;
+            height: 600px;
+            width: 500px;
+            border-style: outset;
+            border-width: 5px;
+            border-color: #ff5202;
+        }
+
+        .radionimg {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 400px;
+            margin-left: 100px;
+        }
+
+        #btperso {
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            border-style: double;
+            border-width: 5px;
+            border-color: chartreuse;
+            background-color: #a202ff;
+            color: azure;
+            display: block;
+        }
     </style>
+   <script>
+    var ckperso = 0; // Adicionando contador
+    var selectedOption = null; // Para rastrear a opção selecionada atualmente
 
-<script>
-      var perso= 8
-    var ckperso= 0
-    function persocheck(){
-        if(ckperso===perso) {
-            document.getElementById("btperso").style.display = "block";  
-            }
-     }
-
-     function ch1(){
-        ckperso ++;
-        persocheck();
-        document.getElementById("img1").style.display = "block"; 
-    }
-    function ch2(){
-        ckperso ++;
-        persocheck();
-        document.getElementById("img2").style.display = "block"; 
-
+    function persocheck(perso) {
+        if (selectedOption !== null) {
+            document.getElementById(selectedOption).style.display = "none"; // Oculta a imagem anterior
+        }
+        selectedOption = perso;
+        document.getElementById(perso).style.display = "block";
     }
 
-    function ch3(){
-        ckperso ++;
-        persocheck();
-        document.getElementById("img3").style.display = "block"; 
-
+    function ch1() {
+        ckperso++;
+        persocheck("img1");
     }
 
-    function ch4(){
-        ckperso ++;
-        persocheck();
-        document.getElementById("img4").style.display = "block"; 
-
+    function ch2() {
+        ckperso++;
+        persocheck("img2");
     }
-    function ch5(){
-        ckperso ++;
-        persocheck();
-        document.getElementById("img5").style.display = "block"; 
 
-    } 
-    function ch6(){
-        ckperso ++;
-        persocheck();
-        document.getElementById("img6").style.display = "block"; 
-
+    function ch3() {
+        ckperso++;
+        persocheck("img3");
     }
-    function ch7(){
-        ckperso ++;
-        persocheck();
-        document.getElementById("img7").style.display = "block"; 
 
+    function ch4() {
+        ckperso++;
+        persocheck("img4");
     }
-    function ch8(){
-        ckperso ++;
-        persocheck();
-        document.getElementById("img8").style.display = "block"; 
 
+    function ch5() {
+        ckperso++;
+        persocheck("img5");
     }
-</script>
+
+    function ch6() {
+        ckperso++;
+        persocheck("img6");
+    }
+
+    function ch7() {
+        ckperso++;
+        persocheck("img7");
+    }
+
+    function ch8() {
+        ckperso++;
+        persocheck("img8");
+    }
+    </script>
 </head>
 <body>
-    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <div class="mg">
+        <h1>Mouse Game - Halloween edition</h1>
+    </div>
     <br>
-    <p>Os botões de opção permitem escolher apenas uma opção de um grupo de opções. Clique em cada um dos botões de opção abaixo para continuar, e aproveite para conhecer novos personagens de halloween! (Observe que apenas um será selecionado por vez.)</p>
+    <p>Os botões de opção permitem escolher apenas uma opção de um grupo de opções. Clique em cada um dos botões de opção abaixo para continuar, e aproveite para conhecer novos personagens de Halloween! (Observe que apenas um será selecionado por vez.)</p>
     <br>
     <br>
 
@@ -151,14 +160,14 @@ input{
             <input type="radio" name="perso" onclick="ch8()" id="perso8"><strong>Leatherface - "O Massacre da Serra Elétrica"</strong><br><br>
         </div>
         <div class="imgpersonagens">
-        <picture><img  src="images/beetlejuicec.jpg" id="img1"></picture>
-        <picture><img  src="images/freddyk.jpg" id="img2"></picture>
-        <picture><img  src="images/jackskell.jpg" id="img3"></picture>
-        <picture><img  src="images/jigsaw.jpg" id="img4"></picture>
-        <picture><img  src="images/emily.jpg" id="img5"></picture>
-        <picture><img  src="images/ichabod.jpg" id="img6"></picture>
-        <picture><img  src="images/edwardsh.jpg" id="img7"></picture>
-        <picture><img  src="images/serra.jpg" id="img8"></picture>
+            <picture><img src="images/beetlejuicec.jpg" id="img1"></picture>
+            <picture><img src="images/freddyk.jpg" id="img2"></picture>
+            <picture><img src="images/jackskell.jpg" id="img3"></picture>
+            <picture><img src="images/jigsaw.jpg" id="img4"></picture>
+            <picture><img src="images/emily.jpg" id="img5"></picture>
+            <picture><img src="images/ichabod.jpg" id="img6"></picture>
+            <picture><img src="images/edwardsh.jpg" id="img7"></picture>
+            <picture><img src="images/serra.jpg" id="img8"></picture>
         </div>
     </div>
-    <button id="btperso" onclick="location='31.html'" style="display: none">Próximo</button>
+    <button id="btperso" onclick="location='31.html'">Próximo</button>

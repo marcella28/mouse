@@ -334,6 +334,11 @@ function allowDrop(ev) {
     document.getElementsByClassName('mostrar')[0].style.display = 'block';
   }
 
+  var nome = document.getElementById('nome')
+  var sobrenome = document.getElementById('sobrenome')
+
+  
+
 
 
 
