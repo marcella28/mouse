@@ -301,7 +301,7 @@ function doce6() {
 function exbutton(){
     if (document.getElementById("days").value == "sexta")
             document.getElementById("btday").style.display = "block";
-        else document.getElementById("boday").style.display = "none";
+        else document.getElementById("btday").style.display = "none";
 }
 
 function exbt(){
