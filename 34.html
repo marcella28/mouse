@@ -49,8 +49,8 @@ p{
 }
 
 .roll1{
-    height:90px;
-    width:260px;
+    height:190px;
+    width:270px;
     border:10px solid #a202ff;
     border-style: double;
     background-color: #66ee23;
@@ -68,23 +68,32 @@ p{
     if (document.getElementById("roll1").value == "esp")
             document.getElementById("btitens").style.display = "block";
         else document.getElementById("btitens").style.display = "none";
+
 }
+
+    function escbt(){
+        if (document.getElementById("roll1").value == "1")
+            document.getElementById("btitens").style.display = "none";
+    }
     </script>
 </head>
 <body>
     <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
     <br>
     <p>A caixa branca abaixo é uma caixa de lista de rolagem. Use a barra de rolagem no lado direito da caixa de listagem para percorrer todas as opções disponíveis. Clique em uma opção para selecioná-la.</p>
-    <p>Escolha o elemento de decoração de Halloween <em>"Espantalhos"</em>, e clique no botão <strong>Continuar</strong></p>
+    <p>Escolha o elemento de decoração/festa de Halloween <em>"Espantalhos"</em>, e clique no botão <strong>Continuar</strong></p>
     <br>
     <select size="2" class="roll1" id="roll1"><br>
-        <option>Lanternas de abóbora</option><br><br>
-        <option> Teias de aranha falsas</option><br><br>
-        <option> Morcegos de papelão</option><br><br>
-        <option>Velas sangrentas</option><br><br>
+        <option onclick="escbt()" value="1">Lanternas de abóbora</option><br><br>
+        <option onclick="escbt()" value="1"> Teias de aranha falsas</option><br><br>
+        <option onclick="escbt()" value="1"> Morcegos de papelão</option><br><br>
+        <option onclick="escbt()" value="1">Velas sangrentas</option><br><br>
         <option onclick="exbt()" value="esp"> Espantalhos</option><br><br>
-        <option> Máscaras de monstros</option><br><br>
-        <option> Fantasmas de pano</option><br>
+        <option onclick="escbt()" value="1"> Máscaras de monstros</option><br><br>
+        <option onclick="escbt()" value="1"> Fantasmas de pano</option><br>
+        <option onclick="escbt()" value="1"> Caldeirão de bruxa</option><br>
+        <option onclick="escbt()" value="1"> Cadáver falso</option><br>
+        <option onclick="escbt()" value="1"> Múmia de papel higiênico</option><br>
         </select>
         <br>
         <br>

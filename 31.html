@@ -40,7 +40,7 @@ input{
     height: 19px;
     width: 19px;
 }
-.hfilmes{
+.hmov{
         position: relative;
         display: flex;
         flex-direction: row;
@@ -70,49 +70,63 @@ input{
 }
     </style>
 
-    <script>
-        var movie= 0
-    var ckmovie= 0
-    function moviecheck(){
-        if(ckmovie>movie) {
-            document.getElementById("btmovie").style.display = "block";  
-            }
-     }
+<script>
+    var selectedOption = null; // Para rastrear a opção selecionada atualmente
 
-     function mov1(){
-        ckmovie ++;
-        moviecheck();
-        document.getElementById("imgn1").style.display = "block"; 
+    var selectedOptions = [];
+
+        function filmecheck2(filme) {
+            if (!selectedOptions.includes(filme)) {
+                selectedOptions.push(filme);
+            }
+            if (selectedOptions.length === 5) {
+                document.getElementById("btmovie").style.display = "block";
+            }
+        }
+
+    function filmecheck(filme) {
+        if (selectedOption !== null) {
+            document.getElementById(selectedOption).style.display = "none"; // Oculta a imagem anterior
+        }
+        selectedOption = filme;
+        document.getElementById(filme).style.display = "block";
     }
-    function mov2(){
-        ckmovie ++;
-        moviecheck();
-        document.getElementById("imgn2").style.display = "block"; 
+
+    function mov1() {
+
+        filmecheck("imgn1");
+        filmecheck2("mov1");
     }
-    function mov3(){
-        ckmovie ++;
-        moviecheck();
-        document.getElementById("imgn3").style.display = "block"; 
+
+    function mov2() {
+        filmecheck("imgn2");
+        filmecheck2("mov2");
     }
-    function mov4(){
-        ckmovie ++;
-        moviecheck();
-        document.getElementById("imgn4").style.display = "block"; 
+
+    function mov3() {
+        filmecheck("imgn3");
+        filmecheck2("mov3");
     }
-    function mov5(){
-        ckmovie ++;
-        moviecheck();
-        document.getElementById("imgn5").style.display = "block"; 
+
+    function mov4() {
+        filmecheck("imgn4");
+        filmecheck2("mov4");
     }
+
+    function mov5() {
+        filmecheck("imgn5");
+        filmecheck2("mov5");
+    }
+
     </script>
 </head>
 <body>
     <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
     <br>
-    <p>Escolha um <em>filme de halloween</em> nos botões de opção abaixo e clique no botão ‘Continuar’.</p>
+    <p>Clique em cada um dos <em>filmes de halloween</em> dos botões de opção abaixo e clique no botão ‘Continuar’.</p>
     <br>
     <br>
-    <div class="hfilmes">
+    <div class="hmov">
         <div style="width: 400px;">
             <input type="radio" name="filme" onclick="mov1() " id="mov1"><strong>"O Estranho Mundo de Jack" (The Nightmare Before Christmas)</strong> - Um clássico animado dirigido por Tim Burton que combina elementos de Halloween e Natal.<br><br>
             <input type="radio" name="filme" onclick="mov2()" id="mov2"><strong>"Halloween" (1978)</strong> - O filme original de John Carpenter que introduziu Michael Myers como um ícone do horror.<br><br>

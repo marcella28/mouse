@@ -334,8 +334,14 @@ function allowDrop(ev) {
     document.getElementsByClassName('mostrar')[0].style.display = 'block';
   }
 
-  var nome = document.getElementById('nome')
-  var sobrenome = document.getElementById('sobrenome')
+  function atualizarCampoCopia() {
+    var nome = document.getElementById('nome').value;
+    var sobrenome = document.getElementById('sobrenome').value;
+    var nomcompleto = document.getElementById('copia');
+    nomcompleto.textContent = nome + ' ' + sobrenome;
+}
+
+window.onload = atualizarCampoCopia; 
 
   
 

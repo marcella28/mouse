@@ -83,12 +83,22 @@
             border-color: chartreuse;
             background-color: #a202ff;
             color: azure;
-            display: block;
+            display: none;
         }
     </style>
    <script>
-    var ckperso = 0; // Adicionando contador
     var selectedOption = null; // Para rastrear a opção selecionada atualmente
+
+    var selectedOptions = [];
+
+        function persocheck2(perso) {
+            if (!selectedOptions.includes(perso)) {
+                selectedOptions.push(perso);
+            }
+            if (selectedOptions.length === 8) {
+                document.getElementById("btperso").style.display = "block";
+            }
+        }
 
     function persocheck(perso) {
         if (selectedOption !== null) {
@@ -99,43 +109,44 @@
     }
 
     function ch1() {
-        ckperso++;
+
         persocheck("img1");
+        persocheck2("perso1");
     }
 
     function ch2() {
-        ckperso++;
         persocheck("img2");
+        persocheck2("perso2");
     }
 
     function ch3() {
-        ckperso++;
         persocheck("img3");
+        persocheck2("perso3");
     }
 
     function ch4() {
-        ckperso++;
         persocheck("img4");
+        persocheck2("perso4");
     }
 
     function ch5() {
-        ckperso++;
         persocheck("img5");
+        persocheck2("perso5");
     }
 
     function ch6() {
-        ckperso++;
         persocheck("img6");
+        persocheck2("perso6");
     }
 
     function ch7() {
-        ckperso++;
         persocheck("img7");
+        persocheck2("perso7");
     }
 
     function ch8() {
-        ckperso++;
         persocheck("img8");
+        persocheck2("perso8");
     }
     </script>
 </head>
