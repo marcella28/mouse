@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="body20">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,10 +120,23 @@ function exibir(id) {
         <picture><img  id="g6" class="btopen" src="images/ghost.jpeg"></picture>
         <picture><img  class="btclick" src="images/abobora.jpeg" onclick="exibir('g7')"></picture> 
         <picture><img  id="g7" class="btopen" src="images/ghost.jpeg"></picture>
-        <button id="btcontinue2" onclick="location = '21.html'">Continue</button>
+        <button id="btcontinue2" onclick="location = '38.html'">Continue</button>
     </div>
                 
     
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador20")) {
+            localStorage.setItem("contador20", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body20 = document.getElementById("body20");
+        body20.addEventListener('click', function() {
+            let contador20 = parseInt(localStorage.getItem("contador20"));
+            contador20 += 1;
+            localStorage.setItem("contador20", contador20.toString());
+        });
+    </script>
     </body>
     </html>
 

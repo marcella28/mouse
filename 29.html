@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="body29">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -229,6 +229,21 @@ function doce6() {
     </div>
     <br>
     <button id="btcesta" class="btcesta" onclick= "location='30.html'">Finalizar cesta</button>
+
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador29")) {
+            localStorage.setItem("contador29", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body29 = document.getElementById("body29");
+        body29.addEventListener('click', function() {
+            let contador29 = parseInt(localStorage.getItem("contador29"));
+            contador29 += 1;
+            localStorage.setItem("contador29", contador29.toString());
+        });
+    </script>
 </body> 
 </html>
   

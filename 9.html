@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="body9">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,5 +79,18 @@ p{
         <img  style="border-radius:10px ;" src="images/jackp.gif" >
     </div>
 
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador9")) {
+            localStorage.setItem("contador9", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body9 = document.getElementById("body9");
+        body9.addEventListener('click', function() {
+            let contador9 = parseInt(localStorage.getItem("contador9"));
+            contador9 += 1;
+            localStorage.setItem("contador9", contador9.toString());
+        });
+    </script>
 </body>
 </html>

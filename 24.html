@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="body24">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,3 +90,19 @@ p{
     <br>
   <div class="clique"> <p>Clique <a  href="25.html">aqui</a> para continuar para a próxima página.</p>
     <img  src="images/mao.png" ></div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador24")) {
+            localStorage.setItem("contador24", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body24 = document.getElementById("body24");
+        body24.addEventListener('click', function() {
+            let contador24 = parseInt(localStorage.getItem("contador24"));
+            contador24 += 1;
+            localStorage.setItem("contador24", contador24.toString());
+        });
+    </script>
+</body>
+</html>
